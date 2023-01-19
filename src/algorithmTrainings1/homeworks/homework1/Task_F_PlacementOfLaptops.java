@@ -23,21 +23,11 @@ public class Task_F_PlacementOfLaptops {
         //int area6 = (a2 + b2) * Math.max(a1, b1); - can be deleted as variable because not used.
         // But important for understating
         int minArea = Math.min((Math.min(area1, area2)), Math.min(area3, area4));
-        if (minArea == area1) {
-            return (a1 + b2) + " " + Math.max(a2, b1);
-        }
-        if (minArea == area2) {
-            return (b1 + a2) + " " + Math.max(a1, b2);
-        }
-        if (minArea == area3) {
-            return (a1 + a2) + " " +  Math.max(b1, b2);
-        }
-        if (minArea == area4) {
-            return (b1 + b2) + " " + Math.max(a1, a2);
-        }
-        if (minArea == area5) {
-            return (a1 + b1) + " " + Math.max(a2, b2);
-        }
+        if (minArea == area1) return (a1 + b2) + " " + Math.max(a2, b1);
+        if (minArea == area2) return (b1 + a2) + " " + Math.max(a1, b2);
+        if (minArea == area3) return (a1 + a2) + " " + Math.max(b1, b2);
+        if (minArea == area4) return (b1 + b2) + " " + Math.max(a1, a2);
+        if (minArea == area5) return (a1 + b1) + " " + Math.max(a2, b2);
         return (a2 + b2) + " " + Math.max(a1, b1); // it's area 6
     }
 
